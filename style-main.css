@@ -11,7 +11,7 @@
     margin: 0 0;
     font-size: 8vmin;
     color: #007171;
-    background-color: white;
+    background-image: linear-gradient(#ffd3aa, white, white, white, white);
     z-index: -1;
     position: fixed;
 }
@@ -21,16 +21,60 @@
     vertical-align: center;
     width: 100%;
     color: #007171;
-    background-color: white;
+    letter-spacing: 0.02em
 }
 
-.filler {
-    height: 60vmin; 
-    background-color: rgba(0, 0, 0, 0);
+.banner > div > h2 {
+    text-align: center;
+    vertical-align: center;
+    width: 100%;
+    color: #007171;
+    font-size: 5vmin;
+    animation-name: topWheel;
+    animation-duration: 2s;
+}
+
+.mountains {
+    width: 100%;
+    height: auto;
     z-index: -2;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .main {
+    padding-top: 10vmin;
     background-color: #007171;
 }
+
+.separator {
+    text-align: center;
+    vertical-align: center;
+    width: 100%;
+    color: #505050;
+    font-size: 5vmin;
+}
+
+@media only screen and (max-width: 1200px) {
+    .banner > div {
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 8vmin;
+        position: fixed;
+    }
+    .separator, .banner > div > h2 {
+        font-size: 2.5vmin;
+    }
+  }
+
+  @media only screen and (max-width: 230px) {
+    .banner {
+        font-size: 5vmin;
+    }
+  }
 
