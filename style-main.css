@@ -47,8 +47,17 @@
 }
 
 .main {
-    padding-top: 10vmin;
+    padding-top: 5vmin;
     background-color: #007171;
+}
+
+.first {
+    padding: 0 5vmin 15vmin;
+}
+
+.first > h1 {
+    text-align: center;
+    padding: 1vmin;
 }
 
 .separator {
@@ -75,7 +84,7 @@
 
   @media only screen and (max-width: 230px) {
     .banner {
-        font-size: 5vmin;
+        font-size: 3vmin;
     }
   }
 
