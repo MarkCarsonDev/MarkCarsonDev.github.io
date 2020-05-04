@@ -1,24 +1,38 @@
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) / 100;
 var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) / 100;
 var vmin = Math.min(vw, vh);
 
 function scrollFunction() {
-  var startThreshold = 12;
-  var endThreshold = 35;
-  // Header grow on scroll
-  if (Math.max(document.body.scrollTop, document.documentElement.scrollTop) > endThreshold * vh) {
-    document.getElementById("header").style.fontSize = "" + endThreshold * vh / 2;
-  } else if (Math.max(document.body.scrollTop, document.documentElement.scrollTop) < endThreshold * vh && Math.max(document.body.scrollTop, document.documentElement.scrollTop) > startThreshold * vh){
-    document.getElementById("header").style.fontSize = "" + (Math.max(document.body.scrollTop, document.documentElement.scrollTop) / 2);
-  } else if (Math.max(document.body.scrollTop, document.documentElement.scrollTop) > startThreshold * vh) {
-    document.getElementById("header").style.fontSize = "" + startThreshold * vh / 2;
+  var baseStart = 12;
+  var baseEnd = 35;
+  var h1 = 0;
+  var h2 = 165;
+  var scrollValue = window.pageYOffset;
+  console.log(scrollValue + ", " + vh + " = " + (scrollValue / vh));
+  // Header1 grow on scroll
+  if (scrollValue > (baseEnd + h1) * vh) {
+    document.getElementById("header").style.fontSize = "" + baseEnd * vh / 2;
+  } else if (scrollValue < (baseEnd + h1) * vh && scrollValue > (baseStart + h1) * vh) {
+    document.getElementById("header").style.fontSize = "" + ((scrollValue - (h1 * vh)) / 2);
+  } else if (scrollValue < (baseStart + h1) * vh) {
+    document.getElementById("header").style.fontSize = "" + baseStart * vh / 2;
   }
-  
+
   // Hide Banner on scroll
-  if (Math.max(document.body.scrollTop, document.documentElement.scrollTop) > 110 * vh) {
+  if (scrollValue > 110 * vh) {
     document.getElementById("banner").style.display = 'none';
   } else {
     document.getElementById("banner").style.display = 'block';
+  }
+
+
+  // Header2 grow on scroll
+  if (scrollValue > (baseEnd + h2) * vh) {
+    document.getElementById("header2").style.fontSize = "" + baseEnd * vh / 2;
+  } else if (scrollValue < (baseEnd + h2) * vh && scrollValue > (baseStart + h2) * vh) {
+    document.getElementById("header2").style.fontSize = "" + ((scrollValue - (h2 * vh)) / 2);
+  } else if (scrollValue < (baseStart + h2) * vh) {
+    document.getElementById("header2").style.fontSize = "" + baseStart * vh / 2;
   }
 }

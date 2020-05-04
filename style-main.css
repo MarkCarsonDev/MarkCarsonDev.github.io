@@ -46,15 +46,33 @@
     user-select: none;
 }
 
-.main {
-    padding-top: 5vmin;
-    background-color: #007171;
+.drips {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    background-color: white;
 }
 
 .first {
     padding: 0 5vmin 15vmin;
-    
+    background-color: #007171;
     text-align: center;
+}
+
+.second {
+        padding: 0 5vmin 15vmin;
+        background-color: #ffffff;
+        text-align: center;
+        color: #007171;
+}
+
+.second > h1, .second > p {
+    color: #007171;
 }
 
 .first > h1 {
@@ -80,6 +98,10 @@ p.right {
     width: 100%;
     color: #505050;
     font-size: 5vmin;
+}
+
+#header2 {
+    margin: 5vh 0;
 }
 
 @media only screen and (max-width: 1200px) {
