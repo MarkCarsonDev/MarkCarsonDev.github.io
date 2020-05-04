@@ -60,6 +60,10 @@
     padding: 1vmin;
 }
 
+.first > p {
+    
+}
+
 .separator {
     text-align: center;
     vertical-align: center;
