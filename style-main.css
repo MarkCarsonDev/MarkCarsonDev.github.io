@@ -53,6 +53,8 @@
 
 .first {
     padding: 0 5vmin 15vmin;
+    
+    text-align: center;
 }
 
 .first > h1 {
@@ -60,8 +62,16 @@
     padding: 1vmin;
 }
 
-.first > p {
-    
+p.left {
+    text-align: left;
+    font-size: 2.5vmin;
+    margin: 0 43vw 2.5vmin 23vw;
+}
+
+p.right {
+    text-align: right;
+    font-size: 2.5vmin;
+    margin: 0 23vw 2.5vmin 43vw;
 }
 
 .separator {
