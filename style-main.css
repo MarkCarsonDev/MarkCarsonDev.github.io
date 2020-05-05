@@ -200,6 +200,20 @@ ul li a {
     .separator, .banner > div > h2 {
         font-size: 2.5vmin;
     }
+
+    p.left {
+        text-align: left;
+        font-size: 2.5vmin;
+        margin: 0 28vw 2.5vmin 23vw;
+        font-weight: 300;
+    }
+    
+    p.right {
+        text-align: right;
+        font-size: 2.5vmin;
+        margin: 0 23vw 2.5vmin 28vw;
+        font-weight: 300;
+    }
   }
 
   @media only screen and (max-width: 230px) {
