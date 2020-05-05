@@ -31,8 +31,8 @@
     width: 100%;
     color: #007171;
     font-size: 5vmin;
-    animation-name: topWheel;
     animation-duration: 2s;
+    
 }
 
 .mountains {
@@ -84,13 +84,97 @@ p.left {
     text-align: left;
     font-size: 2.5vmin;
     margin: 0 43vw 2.5vmin 23vw;
+    font-weight: 300;
 }
 
 p.right {
     text-align: right;
     font-size: 2.5vmin;
     margin: 0 23vw 2.5vmin 43vw;
+    font-weight: 300;
 }
+
+ul {
+    list-style-type:none;
+}
+ul li a {
+    text-decoration:none;
+}
+.buttonDivCyan {
+    width: 100%;
+    text-align: center;
+}
+.buttonDivCyan li {
+    width:15vw;
+    padding: 1vw;
+    display: inline-block;
+    background: white;
+    background: linear-gradient(to right, white 50%, #007171 50%);
+    background-size: 200% 100%;
+    background-position:left bottom;
+    margin: 3vh 3vw;
+    transition:all 0.1s ease;
+    cursor: pointer;
+    outline: white 3px solid;
+}
+.buttonDivCyan li:hover {
+    background-position:right bottom;
+}
+
+.buttonDivCyan li:hover a{
+    color: white;
+    animation-name: cyanToWhite;
+    animation-duration: 0.3s;
+}
+
+.buttonDivCyan li a {
+    font-size: 2.5vmin;
+    font-weight: 300;
+    color: #007171;
+}
+
+@keyframes cyanToWhite {
+    from {color: #007171;}
+    to {color: white;}
+  }
+
+  .buttonDivWhite {
+    width: 100%;
+    text-align: center;
+}
+.buttonDivWhite li {
+    width:15vw;
+    padding: 1vw;
+    display: inline-block;
+    background: #007171;
+    background: linear-gradient(to left, #007171 50%, white 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+    margin: 3vh 3vw;
+    transition:all 0.1s ease;
+    cursor: pointer;
+    outline: #007171 3px solid;
+}
+.buttonDivWhite li:hover {
+    background-position:left bottom;
+}
+
+.buttonDivWhite li:hover a{
+    color: #007171;
+    animation-name: whiteToCyan;
+    animation-duration: 0.3s;
+}
+
+.buttonDivWhite li a {
+    font-size: 2.5vmin;
+    font-weight: 300;
+    color: white;
+}
+
+@keyframes whiteToCyan {
+    from {color: white;}
+    to {color: #007171;}
+  }
 
 .separator {
     text-align: center;
