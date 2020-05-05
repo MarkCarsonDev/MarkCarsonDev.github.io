@@ -12,7 +12,7 @@
     margin: 0 0;
     font-size: 8vmin;
     color: #007171;
-    background-image: linear-gradient(#ffd3aa, white, white, white, white);
+    background-image: linear-gradient(#ffd3aa, white);
     z-index: -1;
     position: fixed;
 }
