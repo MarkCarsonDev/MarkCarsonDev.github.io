@@ -17,7 +17,7 @@
     position: fixed;
 }
 
-.banner > h1 {
+.banner>h1 {
     text-align: center;
     vertical-align: center;
     width: 100%;
@@ -26,14 +26,14 @@
     background-image: linear-gradient(to bottom, rgba(255, 225, 200, 0), rgba(255, 225, 200, 0.2), rgba(255, 225, 200, 0.3), rgba(255, 225, 200, 0.2), rgba(255, 225, 200, 0));
 }
 
-.banner > div > h2 {
+.banner>div>h2 {
     text-align: center;
     vertical-align: center;
     width: 100%;
     color: #007171;
     font-size: 5vmin;
     animation-duration: 2s;
-    
+
 }
 
 .mountains {
@@ -66,17 +66,18 @@
 }
 
 .second {
-        padding: 0 5vmin 15vmin;
-        background-color: #ffffff;
-        text-align: center;
-        color: #007171;
-}
-
-.second > h1, .second > p {
+    padding: 0 5vmin 15vmin;
+    background-color: #ffffff;
+    text-align: center;
     color: #007171;
 }
 
-.first > h1 {
+.second>h1,
+.second>p {
+    color: #007171;
+}
+
+.first>h1 {
     text-align: center;
     padding: 1vmin;
 }
@@ -96,33 +97,43 @@ p.right {
 }
 
 ul {
-    list-style-type:none;
+    list-style-type: none;
 }
+
 ul li a {
-    text-decoration:none;
+    text-decoration: none;
 }
+
 .buttonDivCyan {
     width: 100%;
     text-align: center;
 }
+
 .buttonDivCyan li {
-    width:15vw;
-    padding: 1vw;
+    width: 15vw;
     display: inline-block;
     background: white;
     background: linear-gradient(to right, white 50%, #007171 50%);
     background-size: 200% 100%;
-    background-position:left bottom;
-    margin: 3vh 3vw;
-    transition:all 0.1s ease;
-    cursor: pointer;
+    background-position: left bottom;
+    margin: 3vh 4vw;
+    transition: all 0.1s ease;
     outline: white 3px solid;
 }
-.buttonDivCyan li:hover {
-    background-position:right bottom;
+
+.buttonDivCyan li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    cursor: pointer;
 }
 
-.buttonDivCyan li:hover a{
+.buttonDivCyan li:hover {
+    background-position: right bottom;
+}
+
+.buttonDivCyan li:hover a {
     color: white;
     animation-name: cyanToWhite;
     animation-duration: 0.3s;
@@ -135,32 +146,45 @@ ul li a {
 }
 
 @keyframes cyanToWhite {
-    from {color: #007171;}
-    to {color: white;}
-  }
+    from {
+        color: #007171;
+    }
 
-  .buttonDivWhite {
+    to {
+        color: white;
+    }
+}
+
+.buttonDivWhite {
     width: 100%;
     text-align: center;
 }
+
 .buttonDivWhite li {
-    width:15vw;
-    padding: 1vw;
+    width: 15vw;
     display: inline-block;
     background: #007171;
     background: linear-gradient(to left, #007171 50%, white 50%);
     background-size: 200% 100%;
-    background-position:right bottom;
-    margin: 3vh 3vw;
-    transition:all 0.1s ease;
-    cursor: pointer;
+    background-position: right bottom;
+    margin: 3vh 4vw;
+    transition: all 0.1s ease;
     outline: #007171 3px solid;
 }
-.buttonDivWhite li:hover {
-    background-position:left bottom;
+
+.buttonDivWhite li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    cursor: pointer;
 }
 
-.buttonDivWhite li:hover a{
+.buttonDivWhite li:hover {
+    background-position: left bottom;
+}
+
+.buttonDivWhite li:hover a {
     color: #007171;
     animation-name: whiteToCyan;
     animation-duration: 0.3s;
@@ -173,9 +197,14 @@ ul li a {
 }
 
 @keyframes whiteToCyan {
-    from {color: white;}
-    to {color: #007171;}
-  }
+    from {
+        color: white;
+    }
+
+    to {
+        color: #007171;
+    }
+}
 
 .separator {
     text-align: center;
@@ -186,11 +215,11 @@ ul li a {
 }
 
 #header2 {
-    margin: 5vh 0;
+    padding: 5vh 0;
 }
 
 @media only screen and (max-width: 1200px) {
-    .banner > div {
+    .banner>div {
         text-align: center;
         width: 100%;
         padding: 0;
@@ -198,7 +227,9 @@ ul li a {
         font-size: 8vmin;
         position: fixed;
     }
-    .separator, .banner > div > h2 {
+
+    .separator,
+    .banner>div>h2 {
         font-size: 2.5vmin;
     }
 
@@ -208,18 +239,17 @@ ul li a {
         margin: 0 28vw 2.5vmin 23vw;
         font-weight: 300;
     }
-    
+
     p.right {
         text-align: right;
         font-size: 2.5vmin;
         margin: 0 23vw 2.5vmin 28vw;
         font-weight: 300;
     }
-  }
+}
 
-  @media only screen and (max-width: 230px) {
+@media only screen and (max-width: 230px) {
     .banner {
         font-size: 3vmin;
     }
-  }
-
+}
