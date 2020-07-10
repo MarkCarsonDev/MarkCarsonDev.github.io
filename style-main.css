@@ -262,19 +262,57 @@ ul li a {
 .dropdown-parent > .content {
     transition: all 1s ease;
     cursor: default;
+    display: none;
+    font-size: 0;
+    text-align: center;
+    width: 13vw;
 }
 
 .dropdown-parent > .main {
     cursor: default;
 }
 
-.dropdown-parent > .content {
-    display: none;
-    font-size: 0;
-}
-
 .dropdown-parent:hover > .content {
-    display: block;
+    display: table;
     font-size: 2.5vmin;
 }
 
+#return {
+    margin:  3vh 0vw;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+}
+
+#return > li {
+    width: 10vw;
+    display: inline-block;
+    background: #007171;
+    background: linear-gradient(to left, #007171 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.1s ease;
+}
+
+#return > li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    cursor: pointer;
+}
+
+#return > li:hover {
+    background-position: left bottom;
+}
+
+#return > li:hover a {
+    color: #007171;
+    animation-name: whiteToCyan;
+    animation-duration: 0.3s;
+}
+
+.buttonDivWhite li a {
+    font-size: 2.5vmin;
+    font-weight: 300;
+    color: white;
+}
